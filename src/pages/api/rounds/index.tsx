@@ -1,10 +1,10 @@
-import { playGame } from "../../../helpers/api/rounds.ts";
+import { playGame } from '../../../helpers/api/rounds';
 
 export default (req, res) => {
-    const { gesture } = req.body;
+  const { gesture } = JSON.parse(req.body);
 
-    const result = playGame({ playerGesture: gesture });
+  const result = playGame(gesture);
 
-    res.statusCode = 209;
-    res.json({ result });
-}
+  res.statusCode = 200;
+  res.json({ result });
+};

@@ -1,9 +1,11 @@
 .result {
   font-size: 3rem;
+  color: pink;
 }
 
 .button {
   font-size: 3rem;
+  background-color: blue;
 }
 
 .container {

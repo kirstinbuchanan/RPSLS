@@ -1,5 +1,10 @@
-export const play = gesture => fetch("/api/rounds", {
-    method: 'POST',
-    body: { gesture }
-}).then(response => response.json())
+import axios from 'axios';
 
+export const play = (gesture: string) => {
+  return fetch('/api/rounds', {
+    method: 'POST',
+    body: JSON.stringify({ gesture }),
+  })
+    .then((response) => response.json())
+    .catch((err) => console.log(err));
+};
