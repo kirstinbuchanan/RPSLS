@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { play } from '../../helpers/pages/game.ts';
 import Head from 'next/head';
 import Image from 'next/image';
-import '../../styles/Game.module.css';
+import styles from '../../styles/Game.module.css';
 
 export default () => {
   const [result, setResult] = useState(null);
@@ -22,20 +22,30 @@ export default () => {
       <Head>
         <title> ⛰️ - 🧻 - ✂️ - 🦎 - 🖖</title>
       </Head>
-      <div className="container">
-        <h1>Rock Paper Scissors Lizard Spock!</h1>
-        <button className="button" onClick={() => playGame('rock')}>
+      <div className={styles.container}>
+        <h1 className={styles.heading}>Rock Paper Scissors Lizard Spock!</h1>
+        <button className={styles.button} onClick={() => playGame('rock')}>
           ⛰️
         </button>
-        <button onClick={() => playGame('paper')}>🧻</button>
-        <button onClick={() => playGame('scissors')}>✂️</button>
-        <button onClick={() => playGame('lizard')}>🦎</button>
-        <button onClick={() => playGame('spock')}>🖖</button>
+        <button className={styles.button} onClick={() => playGame('paper')}>
+          🧻
+        </button>
+        <button className={styles.button} onClick={() => playGame('scissors')}>
+          ✂️
+        </button>
+        <button className={styles.button} onClick={() => playGame('lizard')}>
+          🦎
+        </button>
+        <button className={styles.button} onClick={() => playGame('spock')}>
+          🖖
+        </button>
+        <Image src="/RPSLS.png" alt="RPSLS Rules" width="200px" height="200px" />
+        <div>
+          {playerGesture && <h2>{playerGesture}</h2>}
+          {computerGesture && <h2>{computerGesture}</h2>}
+          {result && <h1 className={styles.result}>{result}</h1>}
+        </div>
       </div>
-      <Image src="/RPSLS.png" alt="Rock Paper Scissors Lizard Spock Rules" width="200px" height="200px" />
-      {playerGesture && <h2>{playerGesture}</h2>}
-      {computerGesture && <h2>{computerGesture}</h2>}
-      {result && <h1 className="result">{result}</h1>}
     </>
   );
 };

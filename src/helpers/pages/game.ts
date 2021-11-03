@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 export const play = (gesture: string) => {
   return fetch('/api/rounds', {
     method: 'POST',

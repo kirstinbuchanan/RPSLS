@@ -21,27 +21,6 @@ export const playGame = ({ playerGesture }: { playerGesture: string }) => {
       computerGesture = 'spock';
       break;
   }
-  // console.log('n', n);
-  // console.log('player', playerGesture);
-  // console.log('computergesture', computerGesture);
-
-  // if (playerGesture == computerGesture) {
-  //   result = 'draw!';
-  // } else if (playerGesture === 'rock' && computerGesture === 'paper') {
-  //   result = 'computer wins!';
-  // } else if (playerGesture === 'rock' && computerGesture === 'scissors') {
-  //   result = 'player wins!';
-  // } else if (playerGesture === 'paper' && computerGesture === 'rock') {
-  //   result = 'player wins!';
-  // } else if (playerGesture === 'paper' && computerGesture === 'scissors') {
-  //   result = 'computer wins!';
-  // } else if (playerGesture === 'scissors' && computerGesture === 'rock') {
-  //   result = 'computer wins!';
-  // } else if (playerGesture === 'scissors' && computerGesture === 'paper') {
-  //   result = 'player wins!';
-  // } else {
-  //   result = 'draw!';
-  // }
 
   if (playerGesture === 'rock') {
     switch (computerGesture) {
