@@ -1,4 +1,4 @@
-export let computerGesture;
+export let computerGesture: string;
 
 export let n = Math.ceil(Math.random() * 5);
 

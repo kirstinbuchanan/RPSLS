@@ -13,7 +13,7 @@ export default function Home() {
       <main>
         <div className="title">
           <h1>⛰️ 🧻 ✂️ 🦎 🖖</h1>
-          <h1 data-testid="home">Rock Paper Scissors Lizard Spock!</h1>
+          <h1>Rock Paper Scissors Lizard Spock!</h1>
 
           <Link href="/game" passHref>
             <h2> Play!</h2>
