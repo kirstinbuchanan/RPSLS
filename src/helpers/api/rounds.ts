@@ -22,94 +22,100 @@ export const playGame = ({ playerGesture }: { playerGesture: string }) => {
       break;
   }
 
+  const messages = {
+    win: 'Player wins!',
+    draw: 'Draw!',
+    lose: 'Computer wins!',
+  };
+
   if (playerGesture === 'rock') {
     switch (computerGesture) {
       case 'rock':
-        result = 'draw!';
+        result = messages.draw;
         break;
       case 'spock':
-        result = 'Spock vaporizes rock, computer wins!';
+        result = messages.lose;
         break;
       case 'lizard':
-        result = 'Rock crushes lizard, player wins!';
+        result = messages.win;
         break;
       case 'paper':
-        result = 'Paper covers rock, computer wins!';
+        result = messages.lose;
         break;
       case 'scissors':
-        result = 'Rock crushes scissors, player wins!';
+        result = messages.win;
         break;
     }
   } else if (playerGesture === 'paper') {
     switch (computerGesture) {
       case 'rock':
-        result = 'Paper covers rock, player wins!';
+        result = messages.win;
         break;
       case 'spock':
-        result = 'Paper disproves spock, player wins!';
+        result = messages.win;
         break;
       case 'lizard':
-        result = 'Lizard poisons Spock, computer wins!';
+        result = messages.lose;
         break;
       case 'paper':
-        result = 'draw!';
+        result = messages.draw;
         break;
       case 'scissors':
-        result = 'Scissors cut paper, computer wins!';
+        result = messages.lose;
         break;
     }
   } else if (playerGesture === 'scissors') {
     switch (computerGesture) {
       case 'rock':
-        result = 'Rock crushes scissors, computer wins!';
+        result = messages.lose;
         break;
       case 'spock':
-        result = 'Spock destroys scissors, computer wins!';
+        result = messages.lose;
         break;
       case 'lizard':
-        result = 'Scissors behead lizard, player wins!';
+        result = messages.win;
         break;
       case 'paper':
-        result = 'Scissors cut paper, player wins!';
+        result = messages.win;
         break;
       case 'scissors':
-        result = 'draw!';
+        result = messages.draw;
         break;
     }
   } else if (playerGesture === 'spock') {
     switch (computerGesture) {
       case 'rock':
-        result = 'Spock crushes rock, player wins!';
+        result = messages.win;
         break;
       case 'spock':
-        result = 'draw!';
+        result = messages.draw;
         break;
       case 'lizard':
-        result = 'Lizard poisons Spock, computer wins!';
+        result = messages.lose;
         break;
       case 'paper':
-        result = 'Paper disproves Spock, computer wins!';
+        result = messages.lose;
         break;
       case 'scissors':
-        result = 'Spock crushes scissors, player wins!';
+        result = messages.win;
         break;
     }
   } else if (playerGesture === 'lizard') {
     switch (computerGesture) {
       case 'rock':
-        result = 'Rock crushes lizard, computer wins!';
+        result = messages.lose;
         break;
       case 'spock':
-        result = 'Lizard poisons Spock, player wins!';
+        result = messages.win;
         break;
       case 'lizard':
-        result = 'draw!';
+        result = messages.draw;
         break;
       case 'paper':
-        result = 'Lizard eats paper, player wins!';
+        result = messages.win;
         break;
       case 'scissors':
-        result = 'Scissors behead lizard, computer wins!';
+        result = messages.lose;
         break;
     }
   }
