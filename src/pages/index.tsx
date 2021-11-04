@@ -11,15 +11,15 @@ export default function Home() {
       </Head>
 
       <main>
-        <div>
-          <h1> ⛰️ 🧻 ✂️ 🦎 🖖</h1>
+        <div className="title">
+          <h1>⛰️ 🧻 ✂️ 🦎 🖖</h1>
           <h1>Rock Paper Scissors Lizard Spock!</h1>
 
           <Link href="/game" passHref>
-            Play!
+            <h2> Play!</h2>
           </Link>
+          <Image src={RPSLS} alt="RPSLS Rules" />
         </div>
-        <Image src={RPSLS} alt="RPSLS Rules" />
       </main>
     </div>
   );

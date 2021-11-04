@@ -24,27 +24,43 @@ export default () => {
       </Head>
       <div className={styles.container}>
         <h1 className={styles.heading}>Rock Paper Scissors Lizard Spock!</h1>
-        <button className={styles.button} onClick={() => playGame('rock')}>
-          ⛰️
-        </button>
-        <button className={styles.button} onClick={() => playGame('paper')}>
-          🧻
-        </button>
-        <button className={styles.button} onClick={() => playGame('scissors')}>
-          ✂️
-        </button>
-        <button className={styles.button} onClick={() => playGame('lizard')}>
-          🦎
-        </button>
-        <button className={styles.button} onClick={() => playGame('spock')}>
-          🖖
-        </button>
-        <Image src="/RPSLS.png" alt="RPSLS Rules" width="200px" height="200px" />
         <div>
-          {playerGesture && <h2>{playerGesture}</h2>}
-          {computerGesture && <h2>{computerGesture}</h2>}
-          {result && <h1 className={styles.result}>{result}</h1>}
+          <button className={styles.button} onClick={() => playGame('rock')}>
+            ⛰️
+          </button>
+          <button className={styles.button} onClick={() => playGame('paper')}>
+            🧻
+          </button>
+          <button className={styles.button} onClick={() => playGame('scissors')}>
+            ✂️
+          </button>
+          <button className={styles.button} onClick={() => playGame('lizard')}>
+            🦎
+          </button>
+          <button className={styles.button} onClick={() => playGame('spock')}>
+            🖖
+          </button>
         </div>
+        <Image src="/RPSLS.png" alt="RPSLS Rules" width="250px" height="250px" />
+        <div className={styles.result}>
+          {playerGesture && (
+            <>
+              Player
+              <div className={styles.gesture}>
+                <Image src={`/${playerGesture}.svg`} width="100px" height="100px" alt={`${playerGesture}`} />
+              </div>
+            </>
+          )}
+          {computerGesture && (
+            <>
+              <div className={styles.gesture}>
+                <Image src={`/${computerGesture}.svg`} width="100px" height="100px" alt={`${playerGesture}`} />
+              </div>
+              Computer
+            </>
+          )}
+        </div>
+        {result && <h1 className={styles.result}>{result}</h1>}
       </div>
     </>
   );

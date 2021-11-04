@@ -28,16 +28,16 @@ export const playGame = ({ playerGesture }: { playerGesture: string }) => {
         result = 'draw!';
         break;
       case 'spock':
-        result = 'Spock vaporizes rock, computer wins';
+        result = 'Spock vaporizes rock, computer wins!';
         break;
       case 'lizard':
-        result = 'Rock crushes lizard, player wins';
+        result = 'Rock crushes lizard, player wins!';
         break;
       case 'paper':
-        result = 'Paper covers rock, computer wins';
+        result = 'Paper covers rock, computer wins!';
         break;
       case 'scissors':
-        result = 'Rock crushes scissors, player wins';
+        result = 'Rock crushes scissors, player wins!';
         break;
     }
   } else if (playerGesture === 'paper') {
@@ -64,7 +64,7 @@ export const playGame = ({ playerGesture }: { playerGesture: string }) => {
         result = 'Rock crushes scissors, computer wins!';
         break;
       case 'spock':
-        result = 'Spock destroys scissors, computer wins';
+        result = 'Spock destroys scissors, computer wins!';
         break;
       case 'lizard':
         result = 'Scissors behead lizard, player wins!';

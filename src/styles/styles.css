@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
+.title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.title h1 {
+  font-size: 2.5rem;
+}
+
+.title h2 {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+body {
+  background-color: #ffe8d6;
+}
